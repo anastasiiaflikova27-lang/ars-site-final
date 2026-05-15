@@ -642,3 +642,83 @@ button,input,textarea{font:inherit}
   .btn-row-center { flex-direction: column; align-items: center; gap: 10px }
   .btn-row-center .btn { width: 100%; max-width: 320px }
 }
+
+/* ══ КЕЙСЫ — оливковые акценты ══ */
+
+/* Активная кнопка навигации кейсов — оливковая */
+.case-nav a.active {
+  background: var(--pistachio) !important;
+  border-color: var(--pistachio) !important;
+  color: #fff !important;
+}
+.case-nav a:hover:not(.active) {
+  border-color: var(--pistachio) !important;
+  color: var(--pistachio) !important;
+}
+
+/* Eyebrow в кейсах — оливковый */
+.case-hero .eyebrow { color: var(--pistachio) }
+
+/* case-back ← На главную — оливковый при hover */
+.case-back:hover { color: var(--pistachio) }
+
+/* Case-hero — достаточный отступ сверху чтобы заголовок не уходил под шапку */
+.case-hero {
+  padding-top: 120px !important;
+  scroll-margin-top: 0;
+}
+
+/* Case caption — оливковая полоска слева */
+.case-caption {
+  border-left: 2px solid var(--pistachio);
+  padding-left: 16px;
+  margin-top: 20px;
+}
+
+/* Process pill — оливковый */
+.process-pill {
+  border-color: var(--pistachio) !important;
+  color: var(--pistachio) !important;
+}
+
+/* CTA band кнопки в кейсах */
+.cta-band .quick-contact-btns .btn.light:hover {
+  background: var(--pistachio) !important;
+  border-color: var(--pistachio) !important;
+}
+
+/* ══ ИСПРАВЛЕНИЯ ══ */
+
+/* Кейс-навигация — оливковый активный */
+.case-nav a.active {
+  background: var(--pistachio) !important;
+  border-color: var(--pistachio) !important;
+  color: #fff !important;
+}
+.case-nav a:hover {
+  border-color: var(--pistachio) !important;
+  color: var(--pistachio) !important;
+}
+
+/* Case hero — отступ сверху чтобы шапка не перекрывала заголовок */
+.case-hero {
+  padding-top: 110px !important;
+}
+
+/* Скролл до якоря — учитываем высоту шапки */
+html { scroll-padding-top: 90px }
+
+/* Nav — убираем open по умолчанию на десктопе */
+@media (min-width: 761px) {
+  .nav { display: flex !important }
+}
+@media (max-width: 760px) {
+  .nav { display: none }
+  .nav.open { display: flex }
+}
+
+/* Топбар на кейсах — всегда видимый */
+.topbar.scrolled {
+  background: rgba(247,242,236,.95) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
