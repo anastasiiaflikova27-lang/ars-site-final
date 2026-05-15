@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ÁRS Interior Design — Инвест-ремонты в Санкт-Петербурге</title>
-  <meta name="description" content="ÁRS Interior Design — инвестиционные ремонты под ключ в Санкт-Петербурге.">
+  <title>ÁRS Interior Design — Инвест-ремонты под ключ в Санкт-Петербурге</title>
+  <meta name="description" content="ÁRS Interior Design — инвестиционные ремонты под ключ в Санкт-Петербурге. Дизайн, ремонт, комплектация, сопровождение.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +14,12 @@
   <div class="site-loader"><div class="loader-mark"></div></div>
   <div class="loader-curtains"><div class="loader-panel"></div><div class="loader-panel"></div></div>
   <div class="loader-center-line"></div>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Мы используем cookie для улучшения работы сайта. Продолжая использование, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+    <button class="cookie-btn" onclick="acceptCookies()">Принять</button>
+  </div>
 
   <header class="topbar">
     <div class="container topbar-inner">
@@ -35,8 +41,8 @@
         <div class="tc-div"></div>
         <a href="https://www.instagram.com/ars.interiordesign.ru?igsh=MTN2dW5wbHE0YjF3dA==" target="_blank">Instagram</a>
       </div>
-      <a class="nav-cta nav-cta-mobile" href="#contacts">Связаться</a>
       <button class="mobile-toggle" aria-label="Открыть меню">≡</button>
+      <a class="nav-cta nav-cta-mobile" href="#contacts">Связаться</a>
     </div>
   </header>
 
@@ -45,7 +51,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-media">
-        <img class="hero-image" src="hero.jpg" alt="ÁRS Interior Design">
+        <img class="hero-image" src="hero.jpg" alt="ÁRS Interior Design — инвест-ремонты в Санкт-Петербурге">
       </div>
       <div class="container hero-grid">
         <div class="hero-card reveal visible">
@@ -53,8 +59,8 @@
           <h1 class="hero-title">Инвестиционные<br>ремонты под ключ<br>в Санкт-Петербурге</h1>
           <p class="hero-sub">Готовим квартиры для продажи, аренды и личного проживания: от дизайн-проекта до полной реализации, комплектации и передачи готового объекта.</p>
           <div class="btn-row">
-            <a class="btn light" href="#projects">Смотреть проекты</a>
-            <a class="btn light btn-ghost" href="#contacts">Связаться со студией</a>
+            <a class="btn" href="#projects">Смотреть проекты</a>
+            <a class="btn soft" href="#contacts">Связаться со студией</a>
           </div>
           <div class="hero-tagline">Дизайн · ремонт · комплектация · сопровождение</div>
         </div>
@@ -102,7 +108,7 @@
           <article class="service-block">
             <div class="service-num">01</div>
             <h3 class="service-title">Инвест-ремонт<br>бетон / whitebox</h3>
-            <p class="service-desc">Для квартир, где нужно пройти весь путь от пустого объекта до готового интерьера. Подходит для инвесторов и владельцев под сдачу, продажу или личное использование.</p>
+            <p class="service-desc">Для квартир, где нужно пройти весь путь от пустого объекта до готового интерьера. Под продажу, аренду или личное использование.</p>
             <ul class="service-list">
               <li>Дизайн-проект</li>
               <li>Подбор материалов</li>
@@ -130,7 +136,7 @@
           <article class="service-block">
             <div class="service-num">03</div>
             <h3 class="service-title">Комплектация<br>и хоумстейджинг</h3>
-            <p class="service-desc">Для квартир, где ремонт уже выполнен, но объект нужно собрать визуально: мебель, свет, текстиль, декор, финальная стилизация и подготовка к показам.</p>
+            <p class="service-desc">Для квартир, где ремонт уже выполнен, но объект нужно собрать визуально: мебель, свет, текстиль, декор, финальная стилизация.</p>
             <ul class="service-list">
               <li>Подбор мебели и освещения</li>
               <li>Текстиль и декор</li>
@@ -145,7 +151,7 @@
     </section>
 
     <!-- ПОДБОР ОБЪЕКТА -->
-    <section class="section" style="padding-top:0" id="invest">
+    <section class="section" id="invest" style="padding-top:0">
       <div class="container">
         <div class="invest-block reveal">
           <p class="eyebrow">Подбор объекта</p>
@@ -174,7 +180,6 @@
           <p class="lead">Каждый кейс — прирост стоимости объекта, ставка аренды или готовая к заселению квартира.</p>
         </div>
 
-        <!-- Ряд 1 -->
         <div class="projects-grid reveal" style="margin-bottom:22px;">
           <a class="project-card" href="case-1.html">
             <img src="kav-1.jpg" alt="Кавалергардская">
@@ -213,7 +218,6 @@
           </div>
         </div>
 
-        <!-- Ряд 2 -->
         <div class="projects-grid reveal">
           <a class="project-card" href="case-4.html">
             <img src="lenina-1.jpg" alt="Ленина">
@@ -317,8 +321,8 @@
       </div>
     </section>
 
-    <!-- СТОИМОСТЬ — ТАБЫ -->
-    <section class="section" id="pricing" style="background:var(--surface);">
+    <!-- СТОИМОСТЬ -->
+    <section class="section" id="pricing">
       <div class="container">
         <div class="pricing-top reveal">
           <div>
@@ -326,23 +330,13 @@
             <h2 class="h2">Прозрачные цены под каждый формат</h2>
           </div>
           <div class="ptabs">
-            <button class="ptab active" onclick="ptSwitch(0,this)">
-              <span class="ptab-num">01</span>
-              <span>Инвест-ремонт</span>
-            </button>
-            <button class="ptab" onclick="ptSwitch(1,this)">
-              <span class="ptab-num">02</span>
-              <span>Дизайн-проект</span>
-            </button>
-            <button class="ptab" onclick="ptSwitch(2,this)">
-              <span class="ptab-num">03</span>
-              <span>Комплектация</span>
-            </button>
+            <button class="ptab active" onclick="ptSwitch(0,this)"><span class="ptab-num">01</span><span>Инвест-ремонт</span></button>
+            <button class="ptab" onclick="ptSwitch(1,this)"><span class="ptab-num">02</span><span>Дизайн-проект</span></button>
+            <button class="ptab" onclick="ptSwitch(2,this)"><span class="ptab-num">03</span><span>Комплектация</span></button>
           </div>
         </div>
 
         <div class="ppanels reveal">
-          <!-- Панель 1 -->
           <div class="ppanel active" id="pp0">
             <div class="ppanel-left">
               <p class="ppanel-label">Полный цикл от проекта до передачи объекта</p>
@@ -358,27 +352,13 @@
             </div>
             <div class="ppanel-right">
               <div class="ppanel-rows">
-                <div class="ppanel-row">
-                  <span>Студия · до 30 м²</span>
-                  <span class="ppanel-price">899 900 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>1-комн. · до 45 м²</span>
-                  <span class="ppanel-price">1 049 900 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>2-комн. · до 60 м²</span>
-                  <span class="ppanel-price">1 299 900 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>3-комн. · до 85 м²</span>
-                  <span class="ppanel-price">1 699 900 ₽</span>
-                </div>
+                <div class="ppanel-row"><span>Студия · до 30 м²</span><span class="ppanel-price">899 900 ₽</span></div>
+                <div class="ppanel-row"><span>1-комн. · до 45 м²</span><span class="ppanel-price">1 049 900 ₽</span></div>
+                <div class="ppanel-row"><span>2-комн. · до 60 м²</span><span class="ppanel-price">1 299 900 ₽</span></div>
+                <div class="ppanel-row"><span>3-комн. · до 85 м²</span><span class="ppanel-price">1 699 900 ₽</span></div>
               </div>
             </div>
           </div>
-
-          <!-- Панель 2 -->
           <div class="ppanel" id="pp1">
             <div class="ppanel-left">
               <p class="ppanel-label">Полный пакет для самостоятельной реализации</p>
@@ -394,27 +374,13 @@
             </div>
             <div class="ppanel-right">
               <div class="ppanel-rows">
-                <div class="ppanel-row">
-                  <span>до 30 м²</span>
-                  <span class="ppanel-price">169 990 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 45 м²</span>
-                  <span class="ppanel-price">249 900 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 60 м²</span>
-                  <span class="ppanel-price">329 900 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 85 м²</span>
-                  <span class="ppanel-price">399 900 ₽</span>
-                </div>
+                <div class="ppanel-row"><span>до 30 м²</span><span class="ppanel-price">169 990 ₽</span></div>
+                <div class="ppanel-row"><span>до 45 м²</span><span class="ppanel-price">249 900 ₽</span></div>
+                <div class="ppanel-row"><span>до 60 м²</span><span class="ppanel-price">329 900 ₽</span></div>
+                <div class="ppanel-row"><span>до 85 м²</span><span class="ppanel-price">399 900 ₽</span></div>
               </div>
             </div>
           </div>
-
-          <!-- Панель 3 -->
           <div class="ppanel" id="pp2">
             <div class="ppanel-left">
               <p class="ppanel-label">Финальная сборка готового объекта</p>
@@ -430,28 +396,15 @@
             </div>
             <div class="ppanel-right">
               <div class="ppanel-rows">
-                <div class="ppanel-row">
-                  <span>до 30 м²</span>
-                  <span class="ppanel-price">499 000 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 45 м²</span>
-                  <span class="ppanel-price">499 000 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 60 м²</span>
-                  <span class="ppanel-price">549 000 ₽</span>
-                </div>
-                <div class="ppanel-row">
-                  <span>до 85 м²</span>
-                  <span class="ppanel-price">649 000 ₽</span>
-                </div>
+                <div class="ppanel-row"><span>до 30 м²</span><span class="ppanel-price">499 000 ₽</span></div>
+                <div class="ppanel-row"><span>до 45 м²</span><span class="ppanel-price">499 000 ₽</span></div>
+                <div class="ppanel-row"><span>до 60 м²</span><span class="ppanel-price">549 000 ₽</span></div>
+                <div class="ppanel-row"><span>до 85 м²</span><span class="ppanel-price">649 000 ₽</span></div>
               </div>
             </div>
           </div>
         </div>
-
-        <p class="price-note reveal">Стоимость указана для базовых форматов. Итоговый бюджет зависит от площади, состояния объекта, уровня комплектации и выбранных материалов.</p>
+        <p class="price-note reveal">Стоимость указана для базовых форматов. Итоговый бюджет зависит от состояния объекта, площади, задач, уровня комплектации и выбранных материалов.</p>
       </div>
     </section>
 
@@ -492,16 +445,21 @@
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>ÁRS Interior Design · Санкт-Петербург</div>
-      <div>© ÁRS Interior Design</div>
+    <div class="container footer-inner" style="flex-direction:column;align-items:flex-start;gap:8px;">
+      <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
+        <span>ÁRS Interior Design · Санкт-Петербург</span>
+        <span>© ÁRS Interior Design</span>
+      </div>
+      <div class="footer-legal">
+        ИП Фамилия Имя Отчество · ИНН 000000000000 · ОГРНИП 000000000000000 · Юр. адрес: г. Санкт-Петербург
+        &nbsp;·&nbsp; <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 
@@ -510,6 +468,13 @@
     function ptSwitch(idx, btn) {
       document.querySelectorAll('.ppanel').forEach((p,i) => p.classList.toggle('active', i===idx));
       document.querySelectorAll('.ptab').forEach((t,i) => t.classList.toggle('active', i===idx));
+    }
+    function acceptCookies() {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      localStorage.setItem('cookieAccepted', '1');
+    }
+    if (localStorage.getItem('cookieAccepted')) {
+      document.getElementById('cookieBanner').classList.add('hidden');
     }
   </script>
 </body>

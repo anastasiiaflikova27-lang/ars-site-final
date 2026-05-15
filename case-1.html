@@ -35,7 +35,7 @@
             <h1 class="display">Инвест-ремонт под продажу — прирост стоимости в два раза</h1>
           </div>
           <div class="case-nav">
-            <a class="active" href="case-1.html">01</a>
+            <a href="case-1.html" class="active">01</a>
             <a href="case-2.html">02</a>
             <a href="case-3.html">03</a>
             <a href="case-4.html">04</a>
@@ -53,8 +53,10 @@
       </div>
     </section>
 
-    <section class="case-cover"><img src="kav-1.jpg" alt="Кавалергардская — кухня-гостиная"></section>
+    <!-- Фото 1 — обложка -->
+    <section class="case-cover"><img src="kav-1.jpg" alt="Кавалергардская — главное фото"></section>
 
+    <!-- Идея -->
     <section class="section">
       <div class="container case-story">
         <div class="reveal">
@@ -62,29 +64,30 @@
           <h2 class="h2">Квартира приобреталась как инвестиционный объект под продажу</h2>
         </div>
         <div class="reveal">
-          <p class="copy">Задача — через ремонт, комплектацию и визуальную упаковку повысить ценность объекта на рынке. Важно было не просто сделать красиво, а создать интерьер, который выглядит дороже вложений и помогает квартире выделиться среди аналогичных предложений.</p>
-          <p class="copy">Тёплая нейтральная палитра, натуральные материалы, чёрная графика в кухне — всё работает на одно: ощущение качества и готовности к жизни.</p>
+          <p class="copy">Задача — через ремонт, комплектацию и визуальную упаковку повысить ценность объекта на рынке. Важно было создать интерьер, который выглядит дороже вложений и помогает квартире выделиться среди аналогичных предложений.</p>
+          <p class="copy" style="margin-top:14px;">Тёплая нейтральная палитра, натуральные материалы, чёрная графика в кухне — всё работает на одно: ощущение качества и готовности к жизни.</p>
         </div>
       </div>
     </section>
 
+    <!-- Фото 2 и 3 — галерея -->
     <section class="section" style="padding-top:0">
       <div class="container case-gallery two reveal">
-        <img src="kav-2.jpg" alt="Кухня-гостиная">
-        <img src="kav-3.jpg" alt="Спальня">
+        <img src="kav-2.jpg" alt="Кавалергардская — фото 2">
+        <img src="kav-3.jpg" alt="Кавалергардская — фото 3">
       </div>
     </section>
 
+    <!-- Фото 4 + текст -->
     <section class="section" style="padding-top:0">
       <div class="container case-story stagger">
         <div class="reveal">
-          <img src="kav-4.jpg" alt="Ванная комната">
+          <img src="kav-4.jpg" alt="Кавалергардская — фото 4">
         </div>
         <div class="reveal">
-          <p class="eyebrow">Решения</p>
+          <p class="eyebrow">Результат</p>
           <h2 class="h2">Каждая комната собрана как самостоятельная сцена с единым характером</h2>
           <p class="copy">Кухня работает на контрасте: бежевые фасады, чёрная столешница и фартук, тёплое дерево нижних ящиков. Спальня — мягкая, с молдингами и живописью. Ванная — мрамор, чёрная фурнитура, подсветка зеркала.</p>
-          <p class="copy">В таком интерьере покупатель сразу понимает: здесь всё продумано. Не нужно ничего переделывать — можно сразу заехать.</p>
           <p class="case-caption">Покупка 11,5 млн → ремонт 5,5 млн → продажа 21,5 млн ₽. Вложения в ремонт окупились с запасом.</p>
         </div>
       </div>
@@ -105,9 +108,12 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>ÁRS Interior Design · Санкт-Петербург</div>
-      <div>Кейс 01 · Кавалергардская</div>
+    <div class="container footer-inner" style="flex-direction:column;align-items:flex-start;gap:8px;">
+      <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
+        <span>ÁRS Interior Design · Санкт-Петербург</span>
+        <span>Кейс 01 · Кавалергардская</span>
+      </div>
+      <div class="footer-legal">ИП Фамилия Имя Отчество · ИНН 000000000000 &nbsp;·&nbsp; <a href="privacy.html">Политика конфиденциальности</a></div>
     </div>
   </footer>
   <script src="script.js"></script>
