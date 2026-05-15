@@ -15,9 +15,8 @@
   <div class="loader-curtains"><div class="loader-panel"></div><div class="loader-panel"></div></div>
   <div class="loader-center-line"></div>
 
-  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookieBanner">
-    <p>Мы используем cookie для улучшения работы сайта. Продолжая использование, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+    <p>Мы используем cookie. Продолжая использование сайта, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
     <button class="cookie-btn" onclick="acceptCookies()">Принять</button>
   </div>
 
@@ -41,33 +40,33 @@
         <div class="tc-div"></div>
         <a href="https://www.instagram.com/ars.interiordesign.ru?igsh=MTN2dW5wbHE0YjF3dA==" target="_blank">Instagram</a>
       </div>
-      <button class="mobile-toggle" aria-label="Открыть меню">≡</button>
+      <button class="mobile-toggle" aria-label="Открыть меню">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
       <a class="nav-cta nav-cta-mobile" href="#contacts">Связаться</a>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO — оригинальная структура: кремовая карточка поверх фото -->
     <section class="hero">
       <div class="hero-media">
         <img class="hero-image" src="hero.jpg" alt="ÁRS Interior Design — инвест-ремонты в Санкт-Петербурге">
       </div>
-      <div class="container hero-grid">
-        <div class="hero-card reveal visible">
-          <div class="hero-kicker">Санкт-Петербург</div>
-          <h1 class="hero-title">Инвестиционные<br>ремонты под ключ<br>в Санкт-Петербурге</h1>
-          <p class="hero-sub">Готовим квартиры для продажи, аренды и личного проживания: от дизайн-проекта до полной реализации, комплектации и передачи готового объекта.</p>
-          <div class="btn-row">
-            <a class="btn" href="#projects">Смотреть проекты</a>
-            <a class="btn soft" href="#contacts">Связаться со студией</a>
-          </div>
-          <div class="hero-tagline">Дизайн · ремонт · комплектация · сопровождение</div>
+      <div class="hero-center reveal visible">
+        <div class="hero-logo-big">ÁRS</div>
+        <div class="hero-logo-sub">Interior Design · Санкт-Петербург</div>
+        <h1 class="hero-title">Ценность, превышающая вложения</h1>
+        <p class="hero-sub">Студия инвестиционных ремонтов под ключ. Повышаем ликвидность объектов и их стоимость для аренды и продажи.</p>
+        <div class="hero-divider"></div>
+        <div class="btn-row btn-row-center">
+          <a class="btn light" href="#projects">Смотреть проекты</a>
+          <a class="btn light btn-outline-light" href="#contacts">Связаться со студией</a>
         </div>
-        <div class="hero-side reveal visible">
-          <div class="micro">О студии</div>
-          <p>Дизайнеры, визуализаторы, строительные бригады и риэлтор — в одном проекте. Клиенту не нужно погружаться в процесс: мы доводим объект до готового результата.</p>
-        </div>
+        <div class="hero-tagline">Дизайн · ремонт · комплектация · сопровождение</div>
       </div>
       <div class="hero-scroll">Листать</div>
     </section>
@@ -136,7 +135,7 @@
           <article class="service-block">
             <div class="service-num">03</div>
             <h3 class="service-title">Комплектация<br>и хоумстейджинг</h3>
-            <p class="service-desc">Для квартир, где ремонт уже выполнен, но объект нужно собрать визуально: мебель, свет, текстиль, декор, финальная стилизация.</p>
+            <p class="service-desc">Для квартир, где ремонт уже выполнен, но объект нужно собрать визуально: мебель, свет, текстиль, декор и подготовка к показам.</p>
             <ul class="service-list">
               <li>Подбор мебели и освещения</li>
               <li>Текстиль и декор</li>
@@ -335,7 +334,6 @@
             <button class="ptab" onclick="ptSwitch(2,this)"><span class="ptab-num">03</span><span>Комплектация</span></button>
           </div>
         </div>
-
         <div class="ppanels reveal">
           <div class="ppanel active" id="pp0">
             <div class="ppanel-left">
@@ -457,7 +455,7 @@
         <span>© ÁRS Interior Design</span>
       </div>
       <div class="footer-legal">
-        ИП Фамилия Имя Отчество · ИНН 000000000000 · ОГРНИП 000000000000000 · Юр. адрес: г. Санкт-Петербург
+        ИП Фамилия Имя Отчество · ИНН 000000000000 · ОГРНИП 000000000000000
         &nbsp;·&nbsp; <a href="privacy.html">Политика конфиденциальности</a>
       </div>
     </div>
@@ -471,7 +469,7 @@
     }
     function acceptCookies() {
       document.getElementById('cookieBanner').classList.add('hidden');
-      localStorage.setItem('cookieAccepted', '1');
+      localStorage.setItem('cookieAccepted','1');
     }
     if (localStorage.getItem('cookieAccepted')) {
       document.getElementById('cookieBanner').classList.add('hidden');

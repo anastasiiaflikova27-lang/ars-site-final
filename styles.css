@@ -186,61 +186,41 @@ button,input,textarea{font:inherit}
   .display{font-size:54px}
 }
 
-/* ══════════════════════════════════════
-   ADDITIONS — новые блоки и правки
-══════════════════════════════════════ */
-
+/* ══ ТОЛЬКО ДОБАВЛЕНИЯ — оригинальный дизайн не трогаем ══ */
 :root { --pistachio:#8fa882; --pistachio-light:#e8f0e4; }
 
-/* Loader — локальный логотип */
-.loader-mark { background-image: url('logo-loader.jpg') }
+/* Loader */
+.loader-mark { background-image:url('logo-loader.jpg') }
 
-/* ── Логотип типографический ── */
+/* Логотип типографический */
 .brand-typo { display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-decoration:none }
-.brand-ars { font-family:var(--serif); font-size:38px; font-weight:500; letter-spacing:.06em; line-height:1; color:var(--text); transition:color .3s }
+.brand-ars { font-family:var(--serif); font-size:38px; font-weight:500; letter-spacing:.06em; line-height:1; color:var(--text) }
 .brand-sub { font-family:var(--sans); font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); line-height:1 }
 
-/* ── Быстрые контакты в шапке ── */
+/* Быстрые контакты в шапке */
 .topbar-contacts { display:flex; align-items:center; gap:16px }
 .topbar-contacts a { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); transition:color .25s }
 .topbar-contacts a:hover { color:var(--text) }
 .tc-div { width:1px; height:12px; background:var(--line) }
 
-/* ── HERO — текст прямо на фото, сильный оверлей ── */
-.hero { padding:0; min-height:100svh; display:flex; align-items:flex-end }
-.hero-media::after {
-  background: linear-gradient(
-    165deg,
-    rgba(10,10,10,.70) 0%,
-    rgba(10,10,10,.30) 50%,
-    rgba(10,10,10,.62) 100%
-  ) !important;
-}
-.hero-grid { padding: 140px 0 64px }
-/* Убираем кремовую карточку — текст на фото */
-.hero-card {
-  background: none !important;
-  backdrop-filter: none !important;
-  border: none !important;
-  padding: 0 !important;
-}
-.hero-kicker { color: rgba(255,255,255,.8) !important; letter-spacing:.26em }
-.hero-title { color: #fff !important; font-size: clamp(52px,7vw,96px); text-shadow:0 2px 32px rgba(0,0,0,.22) }
-.hero-sub { color: rgba(255,255,255,.88) !important; font-size:18px; text-shadow:0 1px 12px rgba(0,0,0,.18) }
-.hero-tagline { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-top:20px }
-/* Кнопки hero */
-.hero-card .btn { border-color:rgba(255,255,255,.6) !important; color:#fff !important; background:rgba(255,255,255,.08) !important }
-.hero-card .btn:hover { background:#fff !important; color:var(--text) !important; border-color:#fff !important }
-.hero-card .btn.soft { border-color:rgba(255,255,255,.35) !important; background:rgba(255,255,255,.05) !important; color:rgba(255,255,255,.85) !important }
-.hero-card .btn.soft:hover { background:rgba(255,255,255,.15) !important; color:#fff !important }
+/* Hero — кремовая карточка + читаемый текст (оригинал сохранён) */
+/* Усиливаем оверлей чтобы правая часть и фон лучше смотрелись */
+.hero-media::after { background:linear-gradient(180deg,rgba(18,18,18,.22) 0%,rgba(18,18,18,.08) 28%,rgba(18,18,18,.52) 100%) }
+/* Кнопки на hero-card — тёмные (оригинальный стиль) */
+.hero-card .btn { border-color:var(--text); color:var(--text); background:transparent }
+.hero-card .btn:hover { background:var(--text); color:#fff }
+.hero-card .btn.soft { border-color:var(--line); background:#fff }
+.hero-card .btn.soft:hover { background:var(--bg-soft) }
+/* Тэглайн */
+.hero-tagline { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-top:18px }
 
-/* ── О студии — новый блок ── */
+/* О студии */
 .about-block { display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:start }
 .about-directions { display:grid; margin-top:28px }
 .about-dir { display:flex; align-items:center; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted) }
 .about-dir span:first-child { font-family:var(--serif); font-size:20px; color:var(--pistachio); min-width:30px }
 
-/* ── Блок подбора объекта ── */
+/* Подбор объекта */
 .invest-block { background:var(--text); color:#fff; padding:72px }
 .invest-block .eyebrow { color:rgba(255,255,255,.55) }
 .invest-points { display:grid; grid-template-columns:repeat(2,1fr); gap:18px 40px; margin-top:28px }
@@ -248,22 +228,19 @@ button,input,textarea{font:inherit}
 .invest-point::before { content:"—"; color:var(--pistachio); flex-shrink:0; margin-top:2px }
 .invest-phrase { font-family:var(--serif); font-size:clamp(22px,2.6vw,34px); line-height:1.12; color:#fff; margin:28px 0 0; border-top:1px solid rgba(255,255,255,.12); padding-top:22px }
 
-/* ── Услуги — pistachio акценты ── */
+/* Услуги — pistachio */
 .service-num { font-family:var(--serif); font-size:22px; color:var(--pistachio); margin-bottom:14px }
 .service-list li::before { color:var(--pistachio) !important }
 .service-cta { display:inline-block; margin-top:18px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--pistachio); border-bottom:1px solid var(--pistachio); padding-bottom:2px; transition:opacity .22s }
 .service-cta:hover { opacity:.7 }
 
-/* ── Этапы — pistachio номера ── */
+/* Этапы — pistachio */
 .process-num { color:var(--pistachio) !important }
 
-/* ── FAQ — pistachio иконка ── */
+/* FAQ */
 .faq-item.open .faq-icon { background:var(--pistachio) !important; border-color:var(--pistachio) !important }
 
-/* ── Быстрые контакты CTA ── */
-.quick-contact-btns { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:28px }
-
-/* ── СТОИМОСТЬ — переключаемые табы ── */
+/* Цены — табы */
 .pricing-top { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:end; margin-bottom:48px }
 .ptabs { display:flex; flex-direction:column; border:1px solid var(--line) }
 .ptab { display:flex; align-items:center; gap:16px; padding:18px 22px; background:#fff; border:none; border-bottom:1px solid var(--line); cursor:pointer; font-family:var(--sans); font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); transition:all .25s; position:relative; text-align:left }
@@ -294,12 +271,15 @@ button,input,textarea{font:inherit}
 .ppanel-price { font-family:var(--serif); font-size:26px; color:var(--text); white-space:nowrap }
 .price-note { font-size:14px; color:var(--muted); margin-top:22px; padding-top:18px; border-top:1px solid var(--line); line-height:1.65 }
 
-/* ── Privacy / footer legal ── */
+/* Быстрые контакты */
+.quick-contact-btns { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:28px }
+
+/* Footer legal */
 .footer-legal { font-size:12px; color:var(--muted); margin-top:6px }
 .footer-legal a { color:var(--muted); border-bottom:1px solid var(--line) }
 .footer-legal a:hover { color:var(--text) }
 
-/* ── Cookie banner ── */
+/* Cookie */
 .cookie-banner { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:9000; background:#fff; border:1px solid var(--line); padding:20px 28px; max-width:600px; width:calc(100% - 48px); display:flex; align-items:center; gap:20px; box-shadow:0 8px 40px rgba(0,0,0,.10) }
 .cookie-banner p { font-size:13px; color:var(--muted); margin:0; line-height:1.6; flex:1 }
 .cookie-banner p a { color:var(--text); border-bottom:1px solid var(--line) }
@@ -307,7 +287,7 @@ button,input,textarea{font:inherit}
 .cookie-btn:hover { background:transparent; color:var(--text) }
 .cookie-banner.hidden { display:none }
 
-/* ── Медиа — адаптив ── */
+/* Адаптив */
 @media (max-width:1100px) {
   .topbar-contacts { display:none }
   .about-block { grid-template-columns:1fr; gap:36px }
@@ -324,24 +304,22 @@ button,input,textarea{font:inherit}
 }
 
 @media (max-width:760px) {
-  /* Hero mobile */
-  .hero { padding-top:0; min-height:100svh }
-  .hero-grid { padding:100px 0 48px; grid-template-columns:1fr !important }
-  .hero-title { font-size:42px !important }
-  .hero-sub { font-size:16px }
-  .hero-side { display:none }
-  .btn-row { flex-direction:column; gap:10px }
-  .btn-row .btn { width:100%; justify-content:center; text-align:center }
+  /* Оригинальный мобильный hero */
+  .hero { padding-top:112px; min-height:860px }
+  .hero-card { padding:26px }
+  .hero-title { font-size:44px !important }
 
-  /* Topbar mobile: logo | связаться | burger */
-  .topbar-inner { display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:0; min-height:70px }
+  /* Мобильная шапка: логотип | связаться | бургер */
+  .topbar-inner { display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:0; min-height:72px }
   .brand-typo { justify-self:start }
   .nav-cta-mobile { display:flex !important; justify-self:center; font-size:12px; letter-spacing:.16em; text-transform:uppercase; border-bottom:1px solid var(--text); padding-bottom:2px }
   .nav-cta:not(.nav-cta-mobile) { display:none }
   .mobile-toggle { display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; border:1px solid var(--line); background:#fff; justify-self:end; margin-left:8px }
   .topbar-contacts { display:none }
+  .brand-ars { font-size:30px }
+  .brand-sub { font-size:8px }
 
-  /* New blocks */
+  /* Новые блоки мобиль */
   .about-block { grid-template-columns:1fr; gap:28px }
   .invest-block { padding:36px 20px }
   .invest-points { grid-template-columns:1fr }
@@ -358,10 +336,309 @@ button,input,textarea{font:inherit}
   .contact-value { font-size:22px !important }
   .quick-contact-btns { flex-direction:column; align-items:center }
   .quick-contact-btns .btn { width:100%; max-width:280px; justify-content:center }
-  .brand-ars { font-size:30px }
-  .brand-sub { font-size:8px; letter-spacing:.2em }
   .ptab span:not(.ptab-num) { display:none }
   .ptab { align-items:center; padding:14px 8px }
   .ppanel-price { font-size:20px }
   .cookie-banner { flex-direction:column; gap:14px; bottom:16px }
+}
+
+/* ══ HERO LOGO BIG — как на референсе ══ */
+.hero-logo-big {
+  font-family: var(--serif);
+  font-size: clamp(72px, 16vw, 160px);
+  font-weight: 500;
+  letter-spacing: .04em;
+  line-height: .9;
+  color: #fff;
+  text-shadow: 0 2px 40px rgba(0,0,0,.25);
+  margin-bottom: 4px;
+}
+.hero-logo-sub {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 32px;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 48px) !important;
+  line-height: 1.08 !important;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  margin: 0 0 18px !important;
+  color: #fff !important;
+  text-shadow: 0 1px 20px rgba(0,0,0,.25);
+}
+.hero-sub {
+  font-size: 16px !important;
+  color: rgba(255,255,255,.88) !important;
+  margin: 0 0 32px !important;
+  max-width: 520px;
+  line-height: 1.7;
+  text-shadow: 0 1px 10px rgba(0,0,0,.2);
+}
+.hero-kicker { display: none }
+.hero-tagline {
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45) !important;
+  margin-top: 20px;
+}
+
+/* Кремовая карточка убрана — текст прямо на фото */
+.hero-card {
+  background: none !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  padding: 0 !important;
+  max-width: 640px;
+}
+
+/* Кнопки hero — белые на тёмном */
+.hero-card .btn {
+  border-color: rgba(255,255,255,.65) !important;
+  color: #fff !important;
+  background: rgba(255,255,255,.10) !important;
+}
+.hero-card .btn:hover {
+  background: #fff !important;
+  color: var(--text) !important;
+  border-color: #fff !important;
+}
+.hero-card .btn.soft {
+  border-color: rgba(255,255,255,.35) !important;
+  background: rgba(255,255,255,.05) !important;
+  color: rgba(255,255,255,.85) !important;
+}
+.hero-card .btn.soft:hover {
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+
+/* Hero — тёмный оверлей снизу */
+.hero { padding: 0; min-height: 100svh; display: flex; align-items: flex-end }
+.hero-media::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.80) 0%,
+    rgba(0,0,0,.50) 40%,
+    rgba(0,0,0,.15) 75%,
+    rgba(0,0,0,.05) 100%
+  ) !important;
+}
+.hero-grid { padding: 100px 0 64px; position: relative; z-index: 2 }
+
+/* ══ БУРГЕР — три зелёных линии ══ */
+.mobile-toggle {
+  background: transparent !important;
+  border: none !important;
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0;
+}
+.burger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--pistachio);
+  transition: all .25s ease;
+  border-radius: 1px;
+}
+/* На тёмном hero — линии белые */
+.topbar:not(.scrolled) .burger-line { background: #fff }
+
+/* Mobile hero */
+@media (max-width: 760px) {
+  .hero { min-height: 100svh }
+  .hero-grid { padding: 90px 0 52px; grid-template-columns: 1fr !important; gap: 0 }
+  .hero-logo-big { font-size: clamp(60px, 18vw, 100px) }
+  .hero-side { display: none }
+  .btn-row { flex-direction: column; gap: 10px }
+  .btn-row .btn { width: 100%; justify-content: center }
+}
+
+/* ══════════════════════════════
+   HERO CENTERED — всё по центру
+══════════════════════════════ */
+
+/* Hero занимает полный экран, контент по центру */
+.hero {
+  padding: 0 !important;
+  min-height: 100svh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden;
+}
+
+/* Убираем старый hero-grid */
+.hero-grid { display: none !important }
+
+/* Центральный блок */
+.hero-center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Большой логотип */
+.hero-logo-big {
+  font-family: var(--serif);
+  font-size: clamp(88px, 20vw, 180px);
+  font-weight: 500;
+  letter-spacing: .06em;
+  line-height: .88;
+  color: #fff;
+  text-shadow:
+    0 4px 60px rgba(0,0,0,.30),
+    0 1px 0 rgba(255,255,255,.08);
+  margin-bottom: 8px;
+  animation: heroFadeDown .9s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Подпись под логотипом */
+.hero-logo-sub {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: .36em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 40px;
+  animation: heroFadeDown .9s .1s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Тонкая линия-разделитель */
+.hero-divider {
+  width: 48px;
+  height: 1px;
+  background: rgba(255,255,255,.35);
+  margin: 24px auto;
+  animation: heroFadeDown .9s .2s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Слоган */
+.hero-title {
+  font-family: var(--serif) !important;
+  font-size: clamp(32px, 5vw, 56px) !important;
+  line-height: 1.06 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.02em !important;
+  color: #fff !important;
+  margin: 0 0 20px !important;
+  text-shadow: 0 2px 30px rgba(0,0,0,.25);
+  animation: heroFadeDown .9s .15s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Описание */
+.hero-sub {
+  font-size: 17px !important;
+  color: rgba(255,255,255,.82) !important;
+  margin: 0 0 0 !important;
+  max-width: 540px;
+  line-height: 1.72;
+  text-shadow: 0 1px 12px rgba(0,0,0,.2);
+  animation: heroFadeDown .9s .22s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Кнопки по центру */
+.btn-row-center {
+  justify-content: center !important;
+  animation: heroFadeDown .9s .32s cubic-bezier(.22,1,.36,1) both;
+}
+.btn-row-center .btn {
+  min-width: 200px;
+}
+/* Первая кнопка — белый фон */
+.btn-row-center .btn.light {
+  border-color: #fff !important;
+  color: #fff !important;
+  background: rgba(255,255,255,.12) !important;
+  backdrop-filter: blur(6px);
+}
+.btn-row-center .btn.light:hover {
+  background: #fff !important;
+  color: var(--text) !important;
+}
+/* Вторая кнопка — контурная */
+.btn-outline-light {
+  border-color: rgba(255,255,255,.38) !important;
+  background: transparent !important;
+  color: rgba(255,255,255,.75) !important;
+}
+.btn-outline-light:hover {
+  border-color: rgba(255,255,255,.7) !important;
+  color: #fff !important;
+  background: rgba(255,255,255,.08) !important;
+}
+
+/* Тэглайн */
+.hero-tagline {
+  font-size: 11px !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.38) !important;
+  margin-top: 28px !important;
+  animation: heroFadeDown .9s .4s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Оверлей — тёмный по центру, светлеет к краям (виньетка) */
+.hero-media::after {
+  background:
+    radial-gradient(ellipse at center, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.50) 100%),
+    linear-gradient(to top, rgba(0,0,0,.70) 0%, rgba(0,0,0,.15) 50%, rgba(0,0,0,.30) 100%) !important;
+}
+
+/* Анимация появления */
+@keyframes heroFadeDown {
+  from { opacity: 0; transform: translateY(-18px) }
+  to   { opacity: 1; transform: translateY(0) }
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.5);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+.hero-scroll::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: rgba(255,255,255,.35);
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .hero-center { padding: 100px 20px 70px }
+  .hero-logo-big { font-size: clamp(72px, 22vw, 110px) }
+  .hero-title { font-size: 30px !important }
+  .hero-sub { font-size: 15px !important }
+  .btn-row-center { flex-direction: column; align-items: center; gap: 10px }
+  .btn-row-center .btn { width: 100%; max-width: 320px }
 }
