@@ -1571,3 +1571,66 @@ img {
   .case-gallery img { aspect-ratio: 16/10 }
   .case-tile-img { aspect-ratio: 3/2 }
 }
+
+/* ── Мини-блок личного проживания ── */
+.service-personal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.service-personal-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.04;
+  margin: 0 0 16px;
+}
+.service-personal-desc {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.service-personal-right .service-list {
+  margin-bottom: 0;
+}
+@media (max-width: 760px) {
+  .service-personal {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 32px;
+  }
+}
+
+/* 3 колонки для инвест-услуг */
+@media (min-width: 761px) {
+  .services-editorial {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ── Блок личного проживания — полностью отдельный ── */
+.service-personal {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  padding: 52px !important;
+  margin-top: 52px !important;
+  border-top: none !important;
+}
+.service-personal-title {
+  color: var(--text);
+  margin-bottom: 20px !important;
+}
+/* Убираем старую линию сверху */
+.service-personal {
+  border-top: 1px solid var(--line) !important;
+}
+
+@media (max-width: 760px) {
+  .service-personal { padding: 32px 22px !important }
+}
