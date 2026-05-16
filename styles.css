@@ -1132,3 +1132,336 @@ body { overflow-x: hidden }
   .proj-result { font-size: 12px }
   .proj-tag { font-size: 9px; margin-bottom: 4px }
 }
+
+/* Скрываем ЛИСТАТЬ на мобиле */
+@media (max-width: 760px) {
+  .hero-scroll { display: none !important }
+}
+
+/* 4 услуги в сетке */
+@media (min-width: 761px) {
+  .services-editorial {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+@media (max-width: 760px) {
+  .services-editorial {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ══════════════════════════════════════
+   PORTFOLIO CAROUSEL — горизонтальный скролл
+══════════════════════════════════════ */
+
+/* Убираем hero-scroll везде */
+.hero-scroll { display: none !important }
+
+/* Счётчик */
+.pf-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 28px;
+  font-family: var(--serif);
+}
+.pf-counter-current {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--pistachio);
+  font-weight: 500;
+  transition: all .3s ease;
+}
+.pf-counter-sep { font-size: 18px; color: var(--line) }
+.pf-counter-total { font-size: 18px; color: var(--muted) }
+
+/* Обёртка трека — скрываем скроллбар */
+.pf-track-wrap {
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+.pf-track-wrap:active { cursor: grabbing }
+
+/* Трек — горизонтальный ряд */
+.pf-track {
+  display: flex;
+  gap: 20px;
+  transition: transform .55s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+}
+
+/* Карточка */
+.pf-card {
+  flex: 0 0 calc(33.333% - 14px);
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+}
+
+/* Фото */
+.pf-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 130%;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.pf-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+.pf-card:hover .pf-img-wrap img { transform: scale(1.04) }
+
+/* Фисташковая полоска при hover */
+.pf-img-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--pistachio);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+.pf-card:hover .pf-img-wrap::after { transform: scaleX(1) }
+
+/* Инфо под фото */
+.pf-info {
+  padding: 18px 0 0;
+}
+.pf-info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.pf-tag {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--pistachio);
+  font-family: var(--sans);
+}
+.pf-sqm {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--sans);
+}
+.pf-name {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 500;
+  margin: 0 0 6px;
+  line-height: 1.05;
+  color: var(--text);
+  transition: color .25s;
+}
+.pf-card:hover .pf-name { color: var(--pistachio) }
+.pf-result {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Навигация */
+.pf-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.pf-btn {
+  width: 48px; height: 48px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 18px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all .25s;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pf-btn:hover {
+  background: var(--pistachio);
+  border-color: var(--pistachio);
+  color: #fff;
+}
+.pf-btn:disabled {
+  opacity: .3;
+  cursor: default;
+}
+.pf-btn:disabled:hover {
+  background: #fff;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+/* Точки */
+.pf-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.pf-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: all .25s ease;
+  cursor: pointer;
+}
+.pf-dot.active {
+  background: var(--pistachio);
+  width: 24px;
+  border-radius: 3px;
+}
+
+/* Планшет — 2 карточки */
+@media (max-width: 1100px) {
+  .pf-card { flex: 0 0 calc(50% - 10px) }
+}
+
+/* Мобиль — 1 карточка */
+@media (max-width: 600px) {
+  .pf-card { flex: 0 0 calc(85%) }
+  .pf-track { gap: 14px }
+  .pf-img-wrap { padding-bottom: 100% }
+  .pf-name { font-size: 22px }
+  .pf-counter-current { font-size: 36px }
+}
+
+/* ══════════════════════════════════════
+   CASES GRID — статичная сетка 2 колонки
+══════════════════════════════════════ */
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+/* Карточка */
+.case-tile {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Фото — квадратное соотношение */
+.case-tile-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 110%;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.case-tile-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s ease;
+}
+.case-tile:hover .case-tile-img img {
+  transform: scale(1.05);
+}
+
+/* Тело карточки */
+.case-tile-body {
+  padding: 20px 22px 24px;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+/* Верх: название + тег */
+.case-tile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.case-tile-name {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text);
+  transition: color .25s;
+}
+.case-tile:hover .case-tile-name {
+  color: var(--pistachio);
+}
+.case-tile-tag {
+  flex-shrink: 0;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--pistachio);
+  border: 1px solid var(--pistachio);
+  padding: 3px 8px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* Мета и результат */
+.case-tile-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 8px;
+  letter-spacing: .04em;
+}
+.case-tile-result {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Стрелка при hover */
+.case-tile::after {
+  content: "→";
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  font-size: 16px;
+  color: var(--pistachio);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all .28s ease;
+}
+.case-tile:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Десктоп — увеличиваем фото */
+@media (min-width: 1100px) {
+  .case-tile-img { padding-bottom: 90% }
+  .case-tile-body { padding: 24px 28px 28px }
+  .case-tile-name { font-size: 24px }
+}
+
+/* Мобиль — одна колонка */
+@media (max-width: 600px) {
+  .cases-grid { grid-template-columns: 1fr; gap: 2px }
+  .case-tile-img { padding-bottom: 75% }
+  .case-tile-body { border-right: none }
+  .case-tile-name { font-size: 20px }
+}
