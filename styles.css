@@ -1465,3 +1465,109 @@ body { overflow-x: hidden }
   .case-tile-body { border-right: none }
   .case-tile-name { font-size: 20px }
 }
+
+/* ══════════════════════════════════════
+   ФОТО — идеальное отображение везде
+══════════════════════════════════════ */
+
+/* Все фото на сайте */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ── HERO фото ── */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* ── ОБЛОЖКА КЕЙСА (case-cover) ── */
+.case-cover {
+  position: relative;
+  width: 100%;
+  height: 70svh;
+  min-height: 400px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.case-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── ГАЛЕРЕЯ ДВУХ ФОТО (case-gallery.two) ── */
+.case-gallery {
+  display: grid;
+  gap: 4px;
+}
+.case-gallery.two {
+  grid-template-columns: 1fr 1fr;
+}
+.case-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ── ФОТО В STAGGER (case-story.stagger) ── */
+.case-story img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ── ФОТО В СЕТКЕ ПРОЕКТОВ НА ГЛАВНОЙ ── */
+.case-tile-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-soft);
+  aspect-ratio: 4/3;
+}
+.case-tile-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .65s ease;
+}
+.case-tile:hover .case-tile-img img { transform: scale(1.05) }
+
+/* ── МОБИЛЬ — правки пропорций ── */
+@media (max-width: 760px) {
+  /* Обложка кейса — чуть ниже на мобиле */
+  .case-cover { height: 55svh; min-height: 280px }
+
+  /* Галерея — одна колонка на маленьком экране */
+  .case-gallery.two { grid-template-columns: 1fr }
+  .case-gallery img { aspect-ratio: 4/3 }
+
+  /* Stagger фото — горизонтальное на мобиле */
+  .case-story img { aspect-ratio: 4/3 }
+
+  /* Сетка кейсов — квадратные фото */
+  .case-tile-img { aspect-ratio: 1/1 }
+}
+
+/* ── ДЕСКТОП — улучшения ── */
+@media (min-width: 1100px) {
+  .case-cover { height: 75svh }
+  .case-gallery img { aspect-ratio: 16/10 }
+  .case-tile-img { aspect-ratio: 3/2 }
+}
