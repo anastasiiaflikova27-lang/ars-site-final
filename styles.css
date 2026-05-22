@@ -1634,3 +1634,80 @@ img {
 @media (max-width: 760px) {
   .service-personal { padding: 32px 22px !important }
 }
+
+/* ── Логотип — две строки ── */
+.brand-typo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.brand-city {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.2;
+}
+/* На hero — city тоже белый */
+.topbar:not(.scrolled) .brand-city { color: rgba(255,255,255,.55) }
+
+/* ── Кейсы — заголовок по центру на мобиле ── */
+@media (max-width: 760px) {
+  .case-hero-grid { text-align: left }
+  .case-hero-grid .display { font-size: 36px }
+  .case-stats { grid-template-columns: repeat(2,1fr) !important }
+  .case-back { display: inline-block; margin-bottom: 16px }
+}
+
+/* ── Проекты — фото видны сразу без пустого пространства ── */
+#projects .section-top {
+  padding-bottom: 32px;
+  margin-bottom: 0;
+}
+.cases-grid {
+  margin-top: 0 !important;
+}
+
+/* ── Логотип: Санкт-Петербург второй строкой ── */
+.brand-city {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+.topbar:not(.scrolled) .brand-city { color: rgba(255,255,255,.5) }
+
+/* ── Навигация кейсов — по центру ── */
+.case-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-self: center;
+}
+@media (max-width: 760px) {
+  .case-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .case-nav {
+    justify-content: flex-start !important;
+  }
+}
+
+/* ── Проекты — фото видны сразу, без задержки ── */
+.cases-grid .case-tile {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/* Убираем reveal-задержку только в блоке проектов */
+#projects .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
