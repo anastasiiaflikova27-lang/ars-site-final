@@ -1711,3 +1711,16 @@ img {
   transform: none !important;
   transition: none !important;
 }
+
+
+/* Final small fixes: hero subtitle in two separate lines */
+.hero-logo-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.35;
+}
+.hero-logo-sub span {
+  display: block;
+}
