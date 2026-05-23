@@ -1722,3 +1722,14 @@ img {
   hyphens: none;
   word-break: keep-all;
 }
+
+/* ── Логотип мобиль — обе строки влезают без переноса ── */
+@media (max-width: 480px) {
+  .brand-ars  { font-size: 24px !important; letter-spacing: .04em }
+  .brand-sub  { font-size: 7.5px !important; letter-spacing: .16em; white-space: nowrap }
+  .brand-city { font-size: 7.5px !important; letter-spacing: .16em; white-space: nowrap }
+}
+@media (max-width: 380px) {
+  .brand-sub  { font-size: 6.5px !important; letter-spacing: .1em }
+  .brand-city { font-size: 6.5px !important; letter-spacing: .1em }
+}
