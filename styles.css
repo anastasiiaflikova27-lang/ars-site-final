@@ -1733,3 +1733,7 @@ img {
   .brand-sub  { font-size: 6.5px !important; letter-spacing: .1em }
   .brand-city { font-size: 6.5px !important; letter-spacing: .1em }
 }
+
+/* Санкт-Петербург — никогда не переносится */
+.brand-city, .brand-sub { white-space: nowrap !important; display: block !important; hyphens: none !important; word-break: keep-all !important; }
+.hero-logo-sub span { white-space: nowrap !important; display: block !important; }
