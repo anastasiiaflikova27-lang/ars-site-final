@@ -1737,3 +1737,17 @@ img {
 /* Санкт-Петербург — никогда не переносится */
 .brand-city, .brand-sub { white-space: nowrap !important; display: block !important; hyphens: none !important; word-break: keep-all !important; }
 .hero-logo-sub span { white-space: nowrap !important; display: block !important; }
+
+/* Скролл к проектам — без лишнего зазора сверху */
+#projects {
+  scroll-margin-top: 80px;
+}
+/* Убираем верхний padding у секции проектов */
+#projects.section {
+  padding-top: 48px !important;
+}
+
+/* Скролл прямо к сетке проектов */
+#projects-grid {
+  scroll-margin-top: 72px;
+}
