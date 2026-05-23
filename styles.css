@@ -1711,3 +1711,14 @@ img {
   transform: none !important;
   transition: none !important;
 }
+
+/* Логотип — две строки, Санкт-Петербург без переноса */
+.brand-sub,
+.brand-city {
+  white-space: nowrap;
+  display: block;
+}
+.brand-city {
+  hyphens: none;
+  word-break: keep-all;
+}
