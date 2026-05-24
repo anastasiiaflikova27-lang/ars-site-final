@@ -1751,3 +1751,13 @@ img {
 #projects-grid {
   scroll-margin-top: 72px;
 }
+
+/* Скролл к проектам — учитываем высоту шапки */
+#projects {
+  scroll-margin-top: 72px !important;
+}
+
+/* Якорь сетки проектов — прямо под шапкой */
+#projects-grid {
+  scroll-margin-top: 80px !important;
+}
