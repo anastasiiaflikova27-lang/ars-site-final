@@ -25,11 +25,6 @@
   <div class="loader-curtains"><div class="loader-panel"></div><div class="loader-panel"></div></div>
   <div class="loader-center-line"></div>
 
-  <div class="cookie-banner" id="cookieBanner">
-    <p>Мы используем cookie. Продолжая использование сайта, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
-    <button class="cookie-btn" onclick="acceptCookies()">Принять</button>
-  </div>
-
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand brand-typo" href="index.html">
@@ -520,8 +515,9 @@
         <span>© 2024–2025 ÁRS Interior Design</span>
       </div>
       <div class="footer-legal">
-        ИП Арсентьева Елена Сергеевна · ИНН 780242931545 &nbsp;·&nbsp; <a href="privacy.html">Политика конфиденциальности</a>
+        ИП Арсентьева Елена Сергеевна · ИНН 780242931545
       </div>
+
     </div>
   </footer>
 
@@ -530,13 +526,6 @@
     function ptSwitch(idx, btn) {
       document.querySelectorAll('.ppanel').forEach((p,i) => p.classList.toggle('active', i===idx));
       document.querySelectorAll('.ptab').forEach((t,i) => t.classList.toggle('active', i===idx));
-    }
-    function acceptCookies() {
-      document.getElementById('cookieBanner').classList.add('hidden');
-      localStorage.setItem('cookieAccepted','1');
-    }
-    if (localStorage.getItem('cookieAccepted')) {
-      document.getElementById('cookieBanner').classList.add('hidden');
     }
   </script>
 </body>
